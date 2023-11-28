@@ -1,0 +1,24 @@
+@import "components/flavor.scss";
+@import "components/header.scss";
+@import "components/options.scss";
+@import "components/size.scss";
+@import "components/smells.scss";
+@import "components/whatsapp.scss";
+
+@font-face {
+    font-family: "Droid Sans";
+    src: url("../fonts/DroidSans.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Droid Sans Bold";
+    src: url("../fonts/DroidSans-Bold.ttf") format("truetype");
+}
+
+.App {
+    background-color: #f1f9ff;
+
+    p {
+        margin-bottom: 0;
+    }
+}

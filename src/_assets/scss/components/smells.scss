@@ -1,0 +1,55 @@
+.smells {
+    border-radius: 2.875rem;
+    background-color: #fff;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.35);
+    margin-bottom: 2rem;
+
+    .content {
+        padding: 2rem 5rem;
+
+        .top {
+            margin-bottom: 1rem;
+            .left {
+                align-self: center;
+                .title {
+                    color: #1a3b91;
+                    font-family: "Droid Sans Bold";
+                    font-size: 2.25rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+            }
+
+            .right {
+                align-self: center;
+                .button {
+                    color: #569425;
+                    font-family: "Droid Sans Bold";
+                    font-size: 1.125rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    border-radius: 0.9375rem;
+                    border: 1px solid #569425;
+                    background-color: #fff;
+                    padding: 0.75rem;
+                }
+            }
+        }
+
+        .choice {
+            .column {
+                text-align: center;
+
+                .text {
+                    font-family: "Droid Sans Bold";
+                    font-size: 1.125rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+}
