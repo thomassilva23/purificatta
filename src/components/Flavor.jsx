@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default (props) => {
+export default ({ onChoice }) => {
+  const [flavor, setFlavorStrength] = useState(1); // Initializes with a default value
+
+  const handleSliderChange = (event) => {
+    const newStrength = event.target.value;
+    setFlavorStrength(newStrength);
+    onChoice(newStrength); // Calls the parent component's onChoice function with the new value
+  };
   return (
     <>
       <div className="container flavor">
@@ -14,9 +21,19 @@ export default (props) => {
 
                   <div className="container">
                     <div className="row">
-                      <div className="col-12">slider</div>
+                      <input
+                        type="range"
+                        min="1"
+                        max="3"
+                        step="1"
+                        className="slider"
+                        id="strengthSlider"
+                        value={flavor}
+                        onChange={handleSliderChange}
+                      />
                     </div>
                   </div>
+
                   <div className="container">
                     <div className="row">
                       <div className="col-4">

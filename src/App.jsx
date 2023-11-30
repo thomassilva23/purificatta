@@ -1,14 +1,22 @@
-import "./_assets/scss/main.scss";
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./_assets/scss/main.scss";
 
-//PAGES
+// PAGES
 import User from "./pages/User";
+import UserConfirmation from "./pages/UserConfirmation"; // Importar a página de confirmação
 
 function App() {
   return (
-    <div className="App">
-      <User />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<User />} />
+          <Route path="/confirmation" element={<UserConfirmation />} />
+          {/* Adicionar outras rotas conforme necessário */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

@@ -1,8 +1,13 @@
 @import "components/flavor.scss";
 @import "components/header.scss";
-@import "components/options.scss";
-@import "components/size.scss";
-@import "components/smells.scss";
+@import "components/footer.scss";
+
+@import "components/order/options.scss";
+@import "components/order/size.scss";
+@import "components/order/smells.scss";
+
+@import "components/confirmation/order.scss";
+
 @import "components/whatsapp.scss";
 
 @font-face {
@@ -20,5 +25,48 @@
 
     p {
         margin-bottom: 0;
+    }
+
+    .confirmation {
+        margin-bottom: 2rem;
+
+        .button {
+            color: #569425;
+            font-family: "Droid Sans Bold";
+            font-size: 1.125rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            border-radius: 0.9375rem;
+            border: 1px solid #569425;
+            background-color: #fff;
+            padding: 0.75rem;
+            width: 100%;
+            transition: all 0.3s;
+
+            &:hover {
+                background-color: #569425;
+                color: #fff;
+            }
+        }
+    }
+
+    .button-nutritional {
+        color: #569425;
+        font-family: "Droid Sans Bold";
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        border-radius: 0.9375rem;
+        border: 1px solid #569425;
+        background-color: #fff;
+        padding: 0.75rem;
+        transition: all 0.3s;
+
+        &:hover {
+            color: #fff;
+            background-color: #569425;
+        }
     }
 }

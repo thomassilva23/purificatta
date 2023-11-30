@@ -2,7 +2,9 @@
 import React from "react";
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default (props) => {
+export default () => {
+  const whatsapp = "+5551999999999";
+  const whatsappText = "Hello, world";
   return (
     <>
       <div className="container whatsapp">
@@ -11,7 +13,11 @@ export default (props) => {
             <div className="container content">
               <div className="row">
                 <div className="col-12">
-                  <a href="" target="_blank">
+                  <a
+                    href={`https://api.whatsapp.com/send?phone=${whatsapp}&text=${whatsappText}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="39"

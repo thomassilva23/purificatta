@@ -55,14 +55,6 @@ export default (props) => {
           </div>
         </div>
       </div>
-
-      <div className="container text-header">
-        <div className="row">
-          <div className="col-12">
-            <p className="title">Escolha suas opções</p>
-          </div>
-        </div>
-      </div>
     </>
   );
 };

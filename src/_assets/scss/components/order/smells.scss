@@ -23,18 +23,6 @@
 
             .right {
                 align-self: center;
-                .button {
-                    color: #569425;
-                    font-family: "Droid Sans Bold";
-                    font-size: 1.125rem;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: normal;
-                    border-radius: 0.9375rem;
-                    border: 1px solid #569425;
-                    background-color: #fff;
-                    padding: 0.75rem;
-                }
             }
         }
 
@@ -48,6 +36,31 @@
                     font-style: normal;
                     font-weight: 700;
                     line-height: normal;
+                }
+
+                img {
+                    filter: grayscale(1);
+                    transition: all 0.3s;
+                }
+
+                .text {
+                    color: gray;
+                    transition: all 0.3s;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    transition: all 0.3s;
+
+                    img {
+                        filter: grayscale(0);
+                    }
+                }
+            }
+
+            .selected {
+                img {
+                    filter: grayscale(0);
                 }
             }
         }

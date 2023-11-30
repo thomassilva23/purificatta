@@ -3,7 +3,7 @@
         a {
             float: right;
             border-radius: 1.875rem;
-            background: #aaea79;
+            background-color: #aaea79;
             padding: 0.62rem 1.9rem;
             display: flex;
             align-items: center;
@@ -14,9 +14,14 @@
             font-weight: 700;
             line-height: normal;
             text-decoration: none;
+            transition: all 0.3s;
 
             svg {
                 margin-right: 10px;
+            }
+
+            &:hover {
+                background-color: #569425;
             }
         }
     }
