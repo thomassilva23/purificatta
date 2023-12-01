@@ -24,7 +24,7 @@ export default () => {
   };
 
   const cancelOrder = () => {
-    console.log({ state: { orderDetails: order } });
+    console.log("User canceled order");
   };
 
   return (
@@ -37,6 +37,8 @@ export default () => {
         flavor={orderDetails.flavor}
         size={orderDetails.size}
       />
+
+      {/* IF the user changes the Flavor, it will replace the value in "orderDetails.flavor" */}
 
       <Flavor onChoice={(value) => handleChoice("flavor", value)} />
 

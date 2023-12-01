@@ -28,7 +28,7 @@
     }
 
     .confirmation {
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
 
         .button-confirmation {
             color: #fff;
@@ -71,26 +71,29 @@
         }
     }
 
-    .button-cancel {
-        color: #acacac;
-        font-family: "Droid Sans Bold";
-        font-size: 2.25rem;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        border-radius: 1.5625rem;
-        background: #ededed;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
-        border: 1px solid #ededed;
-        padding: 0.75rem;
-        width: 100%;
-        transition: all 0.3s;
-        margin-bottom: 2rem;
+    .cancel {
+        margin-bottom: 7rem;
 
-        &:hover {
-            background-color: #acacac;
-            border: 1px solid #acacac;
-            color: #ededed;
+        .button-cancel {
+            color: #acacac;
+            font-family: "Droid Sans Bold";
+            font-size: 2.25rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            border-radius: 1.5625rem;
+            background: #ededed;
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+            border: 1px solid #ededed;
+            padding: 0.75rem;
+            width: 100%;
+            transition: all 0.3s;
+
+            &:hover {
+                background-color: #acacac;
+                border: 1px solid #acacac;
+                color: #ededed;
+            }
         }
     }
 }
