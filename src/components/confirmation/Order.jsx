@@ -1,10 +1,14 @@
 import React from "react";
 
 import Guarana from "../../_assets/img/guarana.png";
-import FrutasVermelhas from "../../_assets/img/frutas-vermelhas.png";
+import FrutasVermelhas from "../../_assets/img/frutas-vermelhas-1.png";
 import Limao from "../../_assets/img/limao.png";
 import Tangerina from "../../_assets/img/tangerina.png";
 import AguaNatural from "../../_assets/img/agua-natural.png";
+
+import Sugar from "../../_assets/img/sugar.png";
+import Calories from "../../_assets/img/calories.png";
+import NutritionalTable from "../NutritionalTable";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (props) => {
@@ -78,6 +82,9 @@ export default (props) => {
   const smells = formatSmells(props.smells);
   const size = formatSize(props.size || "200ml");
 
+  const calories = "0";
+  const sugar = "0";
+
   return (
     <>
       <div className="container order">
@@ -89,13 +96,7 @@ export default (props) => {
                   <p className="title">Confirmar escolha</p>
                 </div>
                 <div className="col-6 right">
-                  <button
-                    className="button-nutritional"
-                    data-bs-toggle="modal"
-                    data-bs-target="#nutritionalModal"
-                  >
-                    Tabela nutricional
-                  </button>
+                  <NutritionalTable />
                 </div>
               </div>
             </div>
@@ -105,9 +106,22 @@ export default (props) => {
                   <img src={smellImage} alt={smells} />
 
                   <p className="text-option">{options}</p>
-                  <p className="text-flavor">{flavor}</p>
                   <p className="text-smells">{smells}</p>
                   <p className="text-size">{size}</p>
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="col-5 left">
+                  <img src={Calories} alt="" />
+                  <span className="text">{calories} calorias</span>
+                </div>
+                <div className="col-2 center">
+                  <hr />
+                </div>
+                <div className="col-5 right">
+                  <img src={Sugar} alt="" />
+                  <span className="text">{sugar} açúcar</span>
                 </div>
               </div>
             </div>

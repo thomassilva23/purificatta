@@ -41,7 +41,7 @@ export default (props) => {
       <div className="container confirmation">
         <div className="row">
           <div className="col-12">
-            <button className="button" onClick={goToConfirmation}>
+            <button className="button-confirmation" onClick={goToConfirmation}>
               Confirmar
             </button>
           </div>

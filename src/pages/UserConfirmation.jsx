@@ -20,7 +20,10 @@ export default () => {
   };
 
   const confirmOrder = () => {
-    // Aqui você pode adicionar qualquer lógica adicional necessária antes de confirmar o pedido
+    console.log({ state: { orderDetails: order } });
+  };
+
+  const cancelOrder = () => {
     console.log({ state: { orderDetails: order } });
   };
 
@@ -42,8 +45,18 @@ export default () => {
       <div className="container confirmation">
         <div className="row">
           <div className="col-12">
-            <button className="button" onClick={confirmOrder}>
+            <button className="button-confirmation" onClick={confirmOrder}>
               Confirmar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="container cancel">
+        <div className="row">
+          <div className="col-12">
+            <button className="button-cancel" onClick={cancelOrder}>
+              Cancelar
             </button>
           </div>
         </div>

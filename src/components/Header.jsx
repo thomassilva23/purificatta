@@ -2,6 +2,7 @@ import React from "react";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (props) => {
+  const bottles = "107";
   return (
     <>
       <div className="container header">
@@ -50,7 +51,7 @@ export default (props) => {
           </div>
           <div className="col-8 right">
             <p className="text">
-              Garrafas reutilizadas: <strong>107</strong>
+              Garrafas reutilizadas: <strong>{bottles}</strong>
             </p>
           </div>
         </div>

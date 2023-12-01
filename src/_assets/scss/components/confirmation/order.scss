@@ -32,5 +32,64 @@
 
     .content {
         padding: 2rem 5rem;
+        text-align: center;
+
+        .text-option {
+            color: #8fceed;
+            font-family: "Droid Sans Bold";
+            font-size: 2.25rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .text-smells {
+            color: #bb0601;
+            font-family: "Droid Sans Bold";
+            font-size: 3rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .text-size {
+            color: #8fceed;
+            font-family: "Droid Sans Bold";
+            font-size: 3.75rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 2rem;
+        }
+
+        .left,
+        .right {
+            align-self: center;
+            display: flex;
+            align-items: center;
+
+            .text {
+                color: #88bcd7;
+                font-family: "Droid Sans Bold";
+                font-size: 2.25rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                margin-left: 0.8rem;
+            }
+        }
+
+        .center {
+            align-self: center;
+            text-align: -webkit-center;
+
+            hr {
+                transform: rotate(90deg);
+                width: 70px;
+                background: #88bcd7;
+                opacity: 1;
+                color: #fff;
+            }
+        }
     }
 }

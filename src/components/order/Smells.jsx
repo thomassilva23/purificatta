@@ -5,6 +5,7 @@ import FrutasVermelhas from "../../_assets/img/frutas-vermelhas.png";
 import Limao from "../../_assets/img/limao.png";
 import Tangerina from "../../_assets/img/tangerina.png";
 import AguaNatural from "../../_assets/img/agua-natural.png";
+import NutritionalTable from "../NutritionalTable";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default ({ onChoice }) => {
@@ -50,13 +51,7 @@ export default ({ onChoice }) => {
                         <p className="title">Aromas</p>
                       </div>
                       <div className="col-8 right">
-                        <button
-                          className="button-nutritional"
-                          data-bs-toggle="modal"
-                          data-bs-target="#nutritionalModal"
-                        >
-                          Tabela nutricional
-                        </button>
+                        <NutritionalTable />
                       </div>
                     </div>
                   </div>
