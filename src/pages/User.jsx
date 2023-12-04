@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+
+import axios from "axios";
 
 //COMPONENTS
 import Options from "../components/order/Options";
@@ -29,6 +31,23 @@ export default (props) => {
   const goToConfirmation = () => {
     navigate("/confirmation", { state: { orderDetails: order } });
   };
+
+  useEffect(() => {
+    const setInitialLeds = {
+      LedBlue: 255,
+      LedGreen: 155,
+      LedRed: 0,
+    };
+
+    axios
+      .post("http://hml.allto.digital:5000/set_leds", setInitialLeds)
+      .then((response) => {
+        console.log("Success Blue Leds:", response.data);
+      })
+      .catch((error) => {
+        console.error("Error Blue Leds:", error);
+      });
+  }, []); // Empty dependency array, the effect will only be executed on component assembly
 
   return (
     <>

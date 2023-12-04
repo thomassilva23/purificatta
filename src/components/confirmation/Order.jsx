@@ -42,7 +42,7 @@ export default (props) => {
     }
   };
 
-  const formatFlavor = (flavor) => {
+  /*const formatFlavor = (flavor) => {
     switch (flavor) {
       case "1":
         return "Fraco";
@@ -53,7 +53,7 @@ export default (props) => {
       default:
         return "Fraco";
     }
-  };
+  };*/
 
   const formatSize = (size) => {
     return size === "1L" ? "1 Litro" : size;
@@ -78,7 +78,7 @@ export default (props) => {
   const smellImage = getSmellImage(props.smells);
 
   const options = formatOptions(props.options);
-  const flavor = formatFlavor(props.flavor);
+  //const flavor = formatFlavor(props.flavor);
   const smells = formatSmells(props.smells);
   const size = formatSize(props.size || "200ml");
 
