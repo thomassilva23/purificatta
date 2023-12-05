@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
@@ -14,11 +14,16 @@ import Footer from "../components/Footer";
 // eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
   const location = useLocation();
+
   const { orderDetails } = location.state || {}; // State isn't undefined
 
   const [order, setOrder] = useState(orderDetails);
 
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to top
+  }, []);
 
   const navigate = useNavigate();
 
@@ -146,7 +151,10 @@ export default () => {
 
       {/* IF the user changes the Flavor, it will replace the value in "orderDetails.flavor" */}
 
-      <Flavor onChoice={(value) => handleChoice("flavor", value)} />
+      <Flavor
+        onChoice={(value) => handleChoice("flavor", value)}
+        initialFlavor={orderDetails.flavor}
+      />
 
       <Modal />
 

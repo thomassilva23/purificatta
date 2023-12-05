@@ -15,6 +15,10 @@ import Modal from "../components/Modal";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (props) => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to top
+  }, []);
+
   const [order, setOrder] = useState({
     options: "",
     flavor: "",
