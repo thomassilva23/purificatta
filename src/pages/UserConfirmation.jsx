@@ -100,7 +100,7 @@ export default () => {
   };
 
   const confirmOrder = () => {
-    setIsLoading(true); // Ativa o loader e a opacidade
+    setIsLoading(true); // Activate loader and opacity
 
     const apiPayload = mapOrderDetailsToApiFormat(order);
 
@@ -111,14 +111,14 @@ export default () => {
         console.log("Leds success:", response.data);
 
         setTimeout(() => {
-          setIsLoading(false); // Desativa o loader e a opacidade
-          navigate("/"); // Navega para a página inicial
-        }, 10000); // Aguarda 10 segundos
+          setIsLoading(false); // Loader and opacity disabled
+          navigate("/"); // Returns to initial page
+        }, 10000); // Wait 10 sec
       })
       .catch((error) => {
         setLedsRed();
         console.error("Leds error:", error);
-        setIsLoading(false); // Em caso de erro, desativa o loader e a opacidade mais cedo
+        setIsLoading(false); // If returns error, disable loader and opacity earlier
       });
   };
 
